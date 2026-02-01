@@ -30,7 +30,8 @@ public class Player : MonoBehaviour
         
         Debug.DrawRay(transform.position, Vector2.down * jumpDistance, Color.red);
 
-        if (jumpAction.triggered && InGround())
+        Debug.Log(jumpAction.inProgress);
+        if (jumpAction.inProgress && InGround())
             playerRb.AddForce(0, jumpVelocity, 0);
     }
 
