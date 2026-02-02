@@ -32,20 +32,27 @@ public class Player : MonoBehaviour
     {
         Vector2 action = moveAction.ReadValue<Vector2>();
 
-        direction = new Vector3(action.x, 0, action.y);
-        direction = Camera.main.transform.TransformDirection(direction);
-        direction = new Vector3(direction.x, 0, direction.z);
+        Vector3 camForward = Camera.main.transform.forward;
+        camForward.y = 0;
+        camForward.Normalize();
+
+        Vector3 camRight = Camera.main.transform.right;
+        camRight.y = 0;
+        camRight.Normalize();
+
+        Vector3 moveDirection = camRight * action.x + camForward * action.y;
 
         if (moveAction.inProgress)
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction), 10 * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDirection), 10 * Time.deltaTime);
 
-        playerRb.AddForce(direction.normalized * playerRb.mass * speed * acceleration);
+        playerRb.AddForce(moveDirection.normalized * playerRb.mass * speed * acceleration, ForceMode.Force);
 
-        if (Mathf.Abs(playerRb.linearVelocity.x) > speed)
-            playerRb.linearVelocity = new Vector3(Mathf.Sign(playerRb.linearVelocity.x) * speed, playerRb.linearVelocity.y, playerRb.linearVelocity.z);
-        if (Mathf.Abs(playerRb.linearVelocity.z) > speed)
-            playerRb.linearVelocity = new Vector3(playerRb.linearVelocity.x, playerRb.linearVelocity.y, Mathf.Sign(playerRb.linearVelocity.z) * speed);
-        //transform.position += new Vector3(action.x, 0, action.y) * Time.deltaTime * speed;
+        Vector3 horizontalVelocity = new Vector3(playerRb.linearVelocity.x, 0, playerRb.linearVelocity.z);
+        if (horizontalVelocity.magnitude > speed)
+        {
+            horizontalVelocity = horizontalVelocity.normalized * speed;
+            playerRb.linearVelocity = new Vector3(horizontalVelocity.x, playerRb.linearVelocity.y, horizontalVelocity.z);
+        }
 
         Debug.DrawRay(transform.position, Vector2.down * jumpDistance, Color.red);
 

@@ -66,7 +66,7 @@ public class CameraControl : MonoBehaviour
             transform.RotateAround(player.position, Vector3.up, cameraInput.ReadValue<Vector2>().x * sensitivity * inversX);
 
             // поворот камеры по оси X
-            rotationY += cameraInput.ReadValue<Vector2>().y * sensitivity / 10;
+            rotationY += cameraInput.ReadValue<Vector2>().y * sensitivity;
             rotationY = Mathf.Clamp(rotationY, -Mathf.Abs(minY), Mathf.Abs(maxY));
             float desiredYaw = transform.eulerAngles.y;           
             Quaternion desired = Quaternion.Euler(rotationY, desiredYaw, 0);
