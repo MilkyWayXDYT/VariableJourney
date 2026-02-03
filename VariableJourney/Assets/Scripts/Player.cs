@@ -8,23 +8,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float acceleration = 50;
     [SerializeField]
-    private float jumpVelocity;
-    [SerializeField]
-    private float jumpDistance = 1.5f;
-    [SerializeField]
     private Transform cameraTransform;
 
     private PlayerInput playerInput;
-    private InputAction moveAction, jumpAction;
+    private InputAction moveAction;
     private Rigidbody playerRb;
-
-    private Vector3 direction;
 
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
-        jumpAction = playerInput.actions.FindAction("Jump");
         playerRb = GetComponent<Rigidbody>();
     }
 
@@ -53,22 +46,5 @@ public class Player : MonoBehaviour
             horizontalVelocity = horizontalVelocity.normalized * speed;
             playerRb.linearVelocity = new Vector3(horizontalVelocity.x, playerRb.linearVelocity.y, horizontalVelocity.z);
         }
-
-        Debug.DrawRay(transform.position, Vector2.down * jumpDistance, Color.red);
-
-        if (jumpAction.inProgress && InGround())
-            playerRb.AddForce(0, jumpVelocity, 0);
-    }
-
-    private bool InGround()
-    {
-        bool result = false;
-
-        RaycastHit hit;
-        Ray ray = new Ray(transform.position, Vector3.down);
-        if (Physics.Raycast(ray, out hit, jumpDistance))
-            result = true;
-
-        return result;
     }
 }

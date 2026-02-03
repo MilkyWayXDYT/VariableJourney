@@ -69,7 +69,7 @@ public class CameraControl : MonoBehaviour
             rotationY += cameraInput.ReadValue<Vector2>().y * sensitivity;
             rotationY = Mathf.Clamp(rotationY, -Mathf.Abs(minY), Mathf.Abs(maxY));
             float desiredYaw = transform.eulerAngles.y;           
-            Quaternion desired = Quaternion.Euler(rotationY, desiredYaw, 0);
+            Quaternion desired = Quaternion.Euler(rotationY, desiredYaw * inversY, 0);
 
             // установка камеры на указанной дистанции
             Vector3 targetPosition =
