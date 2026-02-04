@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 215435076}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,7 +981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edc53d30ded53848a64fc7272d7b0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HarpoonSpawn
-  sent: 0
   harpoonPref: {fileID: 2675662743518855366, guid: 0bc7db3b7f08c794a92b8d86fee484bf, type: 3}
   spawnPoint: {fileID: 151584485}
   shotPower: 2
