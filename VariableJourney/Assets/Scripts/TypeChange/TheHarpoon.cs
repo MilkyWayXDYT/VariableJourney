@@ -53,5 +53,11 @@ public class TheHarpoon : MonoBehaviour
         {
             player.position = Vector3.MoveTowards(player.position, joinObj.position, 10 * Time.deltaTime / player.GetComponent<Rigidbody>().mass);
         }
+
+        if (joinObj && Vector3.Distance(player.position, joinObj.position) < 2.0f)
+        {
+            player.GetComponent<HarpoonSpawn>().sent = false;
+            Destroy(gameObject);
+        }
     }
 }

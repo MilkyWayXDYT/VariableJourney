@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 3398199188910731365}
   - component: {fileID: 7690191195374967168}
   - component: {fileID: 916521997116578087}
+  - component: {fileID: 6027493360980847474}
+  - component: {fileID: 5537189005822135167}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -372,8 +374,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db177eb483e2b5d4d947e2bf7a55249d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jump
-  jumpVelocity: 3
-  jumpDistance: 1.5
+  jumpVelocity: 50
+  jumpDistance: 0.8
+--- !u!114 &6027493360980847474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416473387440813402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de30f7a340c78546a331d5e8772644a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction
+  interactiveObj: {fileID: 0}
+--- !u!114 &5537189005822135167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416473387440813402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d58d8ec290aac4c89b16b3bd28f521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TypeSwitch
 --- !u!1 &6293716784999834399
 GameObject:
   m_ObjectHideFlags: 0
