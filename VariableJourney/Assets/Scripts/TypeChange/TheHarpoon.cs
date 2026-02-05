@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,6 +8,7 @@ public class TheHarpoon : MonoBehaviour
 {
     private Transform player;
     private bool back = false;
+    private Transform joinObj; 
 
     void Start()
     {
@@ -17,11 +19,15 @@ public class TheHarpoon : MonoBehaviour
     {
         if (collision.gameObject.tag == "ToBeAttracted")
         {
-
+            var joint = collision.gameObject.AddComponent<CharacterJoint>();
+            joint.connectedBody = this.GetComponent<Rigidbody>();
+            joinObj = collision.transform;
         }
         else if (collision.gameObject.tag == "Attracted")
         {
-
+            var joint = this.AddComponent<CharacterJoint>();
+            joint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+            joinObj = collision.transform;
         }
         else if (collision.gameObject.tag == "Player")
         {
@@ -37,8 +43,15 @@ public class TheHarpoon : MonoBehaviour
     private void Update()
     {
         if (back) 
-        {
             transform.position = Vector3.MoveTowards(transform.position, player.position, 10 * Time.deltaTime);
+
+        if (joinObj && joinObj.tag == "ToBeAttracted")
+        {
+            joinObj.position = Vector3.MoveTowards(joinObj.position, player.position, 10 * Time.deltaTime / joinObj.GetComponent<Rigidbody>().mass);
+        }
+        else if (joinObj && joinObj.tag == "Attracted")
+        {
+            player.position = Vector3.MoveTowards(player.position, joinObj.position, 10 * Time.deltaTime / player.GetComponent<Rigidbody>().mass);
         }
     }
 }

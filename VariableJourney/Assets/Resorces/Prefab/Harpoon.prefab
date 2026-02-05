@@ -152,4 +152,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff714fd2b13a27046ba4e7fb8f427d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TheHarpoon
-  sent: 0

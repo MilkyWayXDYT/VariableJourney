@@ -33,6 +33,11 @@ public class HarpoonSpawn : MonoBehaviour
             harpoon.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.rotation * Vector3.forward * shotPower, ForceMode.Impulse);
             sent = true;
         }
+        else if (context.performed && sent)
+        {
+            Destroy(harpoon);
+            sent = false;
+        }
     }
 
 }
