@@ -20,7 +20,7 @@ public class Interaction : MonoBehaviour
 
     private void Interacting(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && interactiveObj)
             interactiveObj.Switch();
     }
 }

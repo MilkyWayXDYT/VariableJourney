@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class TypeSwitch : MonoBehaviour
 {
     private GameObject player;
+    private CameraUI cameraUI;
 
     private PlayerInput playerInput;
     private InputAction nextAction, previousAction, jumpAction, interactionAction, harpoonAction;
@@ -27,6 +28,8 @@ public class TypeSwitch : MonoBehaviour
         jumpAction.Enable();
         interactionAction.Disable();
         harpoonAction.Disable();
+
+        cameraUI = GameObject.Find("CameraCanvas").GetComponent<CameraUI>();
     }
 
     private void NextType(InputAction.CallbackContext context)
@@ -34,6 +37,7 @@ public class TypeSwitch : MonoBehaviour
         typeIndex++;
         if (typeIndex > 2) typeIndex = 0;
         CheckEnableScript();
+        SetType();
     }
 
     private void PrevType(InputAction.CallbackContext context)
@@ -41,6 +45,7 @@ public class TypeSwitch : MonoBehaviour
         typeIndex--;
         if (typeIndex < 0) typeIndex = 2;
         CheckEnableScript();
+        SetType();
 
     }
 
@@ -64,5 +69,10 @@ public class TypeSwitch : MonoBehaviour
                 harpoonAction.Enable();
                 break;
         }
+    }
+
+    private void SetType()
+    {
+        cameraUI.SetTypeIndex(typeIndex);
     }
 }
