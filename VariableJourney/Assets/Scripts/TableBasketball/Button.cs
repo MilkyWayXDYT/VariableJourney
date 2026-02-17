@@ -1,43 +1,69 @@
+using System.Linq;
 using UnityEngine;
 
 public class Button : MonoBehaviour
 {
     [SerializeField]
-    private float loweringSpeed = 0.5f;
+    private float loweringSpeed = 0.05f;
+    [SerializeField]
+    private float loweringPlaneSpeed = 1f;
+    [SerializeField]
+    private GameObject pushedPlane;
+    [SerializeField]
+    private Transform targetPosition;
+    [SerializeField]
+    private Rigidbody ball;
+    [SerializeField]
+    private Vector3 force;
 
     private Vector3 loweringDistance = new Vector3(0, 0.1f);
+    private Vector3 targetBtnPosition;
+    private Vector3 originalPos;
 
-    private void OnCollisionEnter(Collision collision)
+    private bool ballMove = false;
+
+    private void Start()
     {
-        if (collision.gameObject.tag == "Player")
+        originalPos = transform.position;
+        targetBtnPosition = originalPos;
+    }
+
+    private bool IsTouchingTarget()
+    {
+        return Physics.OverlapSphere(ball.position, 1.1f).Any(hit => hit.gameObject == pushedPlane);
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "Player")
         {
-            ButtonDown();
+            targetBtnPosition = originalPos - loweringDistance;
+            Collider[] hits = Physics.OverlapSphere(ball.position, 1.1f);
+            if (IsTouchingTarget())
+                ballMove = true;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collider)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collider.tag == "Player")
         {
-            ButtonUp();
+            targetBtnPosition = originalPos;
+            ballMove = false;
+        }
+    }
+    private void Update()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, targetBtnPosition, loweringSpeed * Time.deltaTime);
+        if (ballMove)
+        {
+            ball.AddForceAtPosition(force, targetPosition.position + RandDirection());
+            ballMove = false;
         }
     }
 
-    private void ButtonDown()
+    private Vector3 RandDirection()
     {
-        Vector3 targetPosition = transform.position - loweringDistance;
-        while (targetPosition != transform.position)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, loweringSpeed * Time.deltaTime);
-        }
-    }
-
-    private void ButtonUp()
-    {
-        Vector3 targetPosition = transform.position + loweringDistance;
-        while (targetPosition != transform.position)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, loweringSpeed * Time.deltaTime);
-        }
+        return new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f));
     }
 }
