@@ -17,14 +17,21 @@ public class Jump : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         jumpAction = playerInput.actions.FindAction("Jump");
         playerRb = GetComponent<Rigidbody>();
+        jumpAction.performed += Jumping;
     }
 
     void Update()
     {
         Debug.DrawRay(transform.position, Vector2.down * jumpDistance, Color.red);
+    }
 
-        if (jumpAction.inProgress && InGround())
+    private void Jumping(InputAction.CallbackContext callback)
+    {
+        if (callback.performed && InGround())
+        {
+            Debug.Log(callback.performed.ToString());
             playerRb.AddForce(0, jumpVelocity, 0);
+        }
     }
 
     private bool InGround()
