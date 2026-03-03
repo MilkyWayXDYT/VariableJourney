@@ -9,6 +9,8 @@ TagManager:
   - Door
   - Attracted
   - ToBeAttracted
+  - Collider
+  - Column
   layers:
   - Default
   - TransparentFX
@@ -40,7 +42,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Column
   - Plane
   m_SortingLayers:
   - name: Default

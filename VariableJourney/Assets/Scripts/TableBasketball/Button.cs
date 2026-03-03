@@ -6,8 +6,6 @@ public class Button : MonoBehaviour
     [SerializeField]
     private float loweringSpeed = 0.05f;
     [SerializeField]
-    private float loweringPlaneSpeed = 1f;
-    [SerializeField]
     private GameObject pushedPlane;
     [SerializeField]
     private Transform targetPosition;
