@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class InteractiveObj : MonoBehaviour
 {
+    [SerializeField] private Door[] doors;
+
     private GameObject player;
     private PlayerInput playerInput;
     private InputAction actionInteract;
@@ -52,10 +54,13 @@ public class InteractiveObj : MonoBehaviour
     {
         float rotate = objEnable ? 20 : -20;
         transform.Find("GameObject").localRotation = Quaternion.Euler(0, 0, rotate);
+        foreach (Door door in doors)
+        {
+            door.DoorAction();
+        }
     }
 
     private void Opening()
     {
-
     }
 }
