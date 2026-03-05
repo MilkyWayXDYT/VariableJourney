@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+// линия строится один раз, когда пользователь приходит на уровень, на данный момент скрипт выключен
 [RequireComponent(typeof(LineRenderer))]
 public class LineController : MonoBehaviour
 {
@@ -96,8 +96,6 @@ public class LineController : MonoBehaviour
         ropeCol.radius = 0.05f;
         ropeCol.height = length + ropeCol.radius * 2;
         ropeCol.material = ropeMaterial;
-
-        ropeSegment.AddComponent<Rope>();
 
         ropeColliders.Add(ropeSegment);
     }

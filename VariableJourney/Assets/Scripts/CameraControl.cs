@@ -15,6 +15,7 @@ public class CameraControl : MonoBehaviour
     public float sensitivity = 2; // чувствительность мыши
     public float distance = 5; // расстояние между камерой и игроком
     public float height = 2.3f;
+    public float collisionRadius = 0.3f;
 
     [Header("Over The Shoulder")]
     public float offsetPosition; // смещение камеры вправо или влево
@@ -45,12 +46,14 @@ public class CameraControl : MonoBehaviour
     Vector3 PositionCorrection(Vector3 target, Vector3 position)
     {
         RaycastHit hit;
+
+        Vector3 dir = (position - target).normalized;
+        float dist = Vector3.Distance(target, position);
+
         Debug.DrawLine(target, position, Color.blue);
-        if (Physics.Linecast(target, position, out hit))
+        if (Physics.SphereCast(target, collisionRadius, dir, out hit, dist))
         {
-            float tempDistance = Vector3.Distance(target, hit.point);
-            Vector3 pos = target - (transform.rotation * Vector3.forward * tempDistance);
-            position = new Vector3(pos.x, position.y, pos.z);
+            position = target + dir * hit.distance;
         }
         return position;
     }
