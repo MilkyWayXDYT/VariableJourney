@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -14,16 +15,25 @@ public class Player : MonoBehaviour
 
     private PlayerInput playerInput;
     private InputAction moveAction;
+    private InputAction camResetAction;
     private Rigidbody playerRb;
+    private Quaternion targetRotation;
 
     private LineController lineController;
+
+    private bool forceCameraRotation = false;
 
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
+        camResetAction = playerInput.actions.FindAction("CameraReset");
         playerRb = GetComponent<Rigidbody>();
-        lineController = GameObject.Find("Start").GetComponent<LineController>();
+
+        camResetAction.performed += PlayerRotReset;
+
+        if (SceneManager.GetActiveScene().name == "TypingLevel")
+            lineController = GameObject.Find("Start").GetComponent<LineController>();
     }
 
     void FixedUpdate()
@@ -41,7 +51,7 @@ public class Player : MonoBehaviour
         Vector3 moveDirection = camRight * action.x + camForward * action.y;
 
         if (moveAction.inProgress)
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDirection), 10 * Time.deltaTime);
+            targetRotation = Quaternion.LookRotation(moveDirection);
 
         playerRb.AddForce(moveDirection.normalized * playerRb.mass * speed * acceleration, ForceMode.Force);
 
@@ -54,6 +64,12 @@ public class Player : MonoBehaviour
 
         if (lineController && lineController.points.Count > 0)
             PlayerMoveBlock();
+
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRotation,
+            10 * Time.deltaTime
+        );
     }
 
     private void PlayerMoveBlock()
@@ -68,6 +84,17 @@ public class Player : MonoBehaviour
         if (offset.magnitude > maxDistance)
         {
             playerRb.MovePosition(lineController.points[1] + offset.normalized * maxDistance);
+        }
+    }
+
+    private void PlayerRotReset(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Vector3 forward = cameraTransform.forward;
+            forward.y = 0;
+
+            targetRotation = Quaternion.LookRotation(forward);
         }
     }
 }

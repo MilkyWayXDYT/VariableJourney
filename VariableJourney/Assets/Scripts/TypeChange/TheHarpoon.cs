@@ -51,7 +51,7 @@ public class TheHarpoon : MonoBehaviour
         }
         else if (joinObj && joinObj.tag == "Attracted")
         {
-            player.position = Vector3.MoveTowards(player.position, joinObj.position, 10 * Time.deltaTime / player.GetComponent<Rigidbody>().mass);
+            player.position = Vector3.MoveTowards(player.position, joinObj.position, 20 * Time.deltaTime / player.GetComponent<Rigidbody>().mass);
         }
 
         if (joinObj && Vector3.Distance(player.position, joinObj.position) < 2.0f)

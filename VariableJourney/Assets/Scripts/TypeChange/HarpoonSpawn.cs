@@ -11,6 +11,8 @@ public class HarpoonSpawn : MonoBehaviour
     private Transform spawnPoint;
     [SerializeField]
     private float shotPower;
+    [SerializeField]
+    private Transform cameraRot;
 
     private PlayerInput playerInput;
     private InputAction shotAction;
@@ -30,7 +32,12 @@ public class HarpoonSpawn : MonoBehaviour
         if (context.performed && !sent)
         {
             harpoon = Instantiate(harpoonPref, spawnPoint.transform.position, Quaternion.identity);
-            harpoon.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.rotation * Vector3.forward * shotPower, ForceMode.Impulse);
+            float cameraX = cameraRot.eulerAngles.x;
+
+            Quaternion cameraPitch = Quaternion.Euler(cameraX, 0, 0);
+            Quaternion finalRot = spawnPoint.rotation * cameraPitch;
+
+            harpoon.GetComponent<Rigidbody>().AddForce(finalRot * Vector3.forward * shotPower, ForceMode.Impulse);
             sent = true;
         }
         else if (context.performed && sent)
