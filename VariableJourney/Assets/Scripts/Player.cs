@@ -21,8 +21,6 @@ public class Player : MonoBehaviour
 
     private LineController lineController;
 
-    private bool forceCameraRotation = false;
-
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();

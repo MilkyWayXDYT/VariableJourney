@@ -45,19 +45,24 @@ public class TheHarpoon : MonoBehaviour
         if (back) 
             transform.position = Vector3.MoveTowards(transform.position, player.position, 10 * Time.deltaTime);
 
-        if (joinObj && joinObj.tag == "ToBeAttracted")
+        if (joinObj)
         {
-            joinObj.position = Vector3.MoveTowards(joinObj.position, player.position, 10 * Time.deltaTime / joinObj.GetComponent<Rigidbody>().mass);
-        }
-        else if (joinObj && joinObj.tag == "Attracted")
-        {
-            player.position = Vector3.MoveTowards(player.position, joinObj.position, 20 * Time.deltaTime / player.GetComponent<Rigidbody>().mass);
-        }
+            Platform platform = joinObj.GetComponent<Platform>();
+            float harpoonForce = platform.harpoonForce;
+            if (joinObj.tag == "ToBeAttracted")
+            {
+                joinObj.position = Vector3.MoveTowards(joinObj.position, player.position, harpoonForce * Time.deltaTime / joinObj.GetComponent<Rigidbody>().mass);
+            }
+            else if (joinObj.tag == "Attracted")
+            {
+                player.position = Vector3.MoveTowards(player.position, joinObj.position, harpoonForce * Time.deltaTime / player.GetComponent<Rigidbody>().mass);
+            }
 
-        if (joinObj && Vector3.Distance(player.position, joinObj.position) < 2.0f)
-        {
-            player.GetComponent<HarpoonSpawn>().sent = false;
-            Destroy(gameObject);
+            if (Vector3.Distance(player.position, joinObj.position) < 2.0f)
+            {
+                player.GetComponent<HarpoonSpawn>().sent = false;
+                Destroy(gameObject);
+            }
         }
     }
 }
