@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4071758712613355522}
   - component: {fileID: 8324847333870318993}
   - component: {fileID: 2797407703385492596}
+  - component: {fileID: 5167180067238217753}
   m_Layer: 0
   m_Name: ToBeAttracted
   m_TagString: ToBeAttracted
@@ -139,3 +140,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &5167180067238217753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509166712700990914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0dbf768161e02d468379d4a96f45c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Platform
+  harpoonForce: 10

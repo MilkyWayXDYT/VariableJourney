@@ -11,6 +11,7 @@ TagManager:
   - ToBeAttracted
   - Collider
   - Column
+  - Platform
   layers:
   - Default
   - TransparentFX

@@ -51,7 +51,8 @@ public class Player : MonoBehaviour
         if (moveAction.inProgress)
             targetRotation = Quaternion.LookRotation(moveDirection);
 
-        playerRb.AddForce(moveDirection.normalized * playerRb.mass * speed * acceleration, ForceMode.Force);
+        if (!IsWallAhead(moveDirection.normalized))
+            playerRb.AddForce(moveDirection.normalized * playerRb.mass * speed * acceleration, ForceMode.Force);
 
         Vector3 horizontalVelocity = new Vector3(playerRb.linearVelocity.x, 0, playerRb.linearVelocity.z);
         if (horizontalVelocity.magnitude > speed)
@@ -68,6 +69,11 @@ public class Player : MonoBehaviour
             targetRotation,
             10 * Time.deltaTime
         );
+
+        if (InGround() && action == new Vector2(0, 0))
+        {
+            playerRb.linearVelocity = new Vector3(0, playerRb.linearVelocity.y, 0);
+        }
     }
 
     private void PlayerMoveBlock()
@@ -94,5 +100,34 @@ public class Player : MonoBehaviour
 
             targetRotation = Quaternion.LookRotation(forward);
         }
+    }
+
+    private bool InGround()
+    {
+        bool result = false;
+
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, Vector3.down);
+        if (Physics.Raycast(ray, out hit, 0.8f))
+            result = true;
+
+        return result;
+    }
+
+    bool IsWallAhead(Vector3 direction)
+    {
+        CapsuleCollider col = GetComponent<CapsuleCollider>();
+
+        float radius = col.radius * 0.9f;
+        float height = col.height;
+
+        Vector3 center = transform.position + col.center;
+
+        Vector3 point1 = center + Vector3.up * (height / 2 - radius);
+        Vector3 point2 = center - Vector3.up * (height / 2 - radius);
+
+        float distance = 0.3f;
+
+        return Physics.CapsuleCast(point1, point2, radius, direction, distance);
     }
 }

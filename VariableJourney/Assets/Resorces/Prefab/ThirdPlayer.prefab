@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625417420085238587}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.28401542, y: 0, z: 0, w: 0.95881975}
+  m_LocalRotation: {x: -0.08715578, y: 0, z: 0, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0.337, z: 0.459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8356478641521242145}
-  m_LocalEulerAnglesHint: {x: -33, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}
 --- !u!1 &2315775745804948153
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &547102823084115808
 Transform:
   m_ObjectHideFlags: 0
@@ -438,7 +438,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8565538918282714321}
   - {fileID: 7199062680070042591}
   m_Father: {fileID: 6417670151752208896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -501,7 +500,7 @@ MonoBehaviour:
   TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
-  MinimumDistanceFromTarget: 0.3
+  MinimumDistanceFromTarget: 0.2
   AvoidObstacles:
     Enabled: 1
     DistanceLimit: 0
@@ -716,8 +715,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6293716784999834399}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1992257, y: -0.0041906866, z: 0.0008519795, w: 0.97994435}
-  m_LocalPosition: {x: 0, y: 2.5985289, z: -1.3823452}
+  m_LocalRotation: {x: 0.209969, y: -0.004181083, z: 0.00089792255, w: 0.9776987}
+  m_LocalPosition: {x: 0, y: 1.8319445, z: 0.5938177}
   m_LocalScale: {x: 0, y: 0.5828775, z: 1.7433188}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -754,7 +753,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.01
   far clip plane: 5000
   field of view: 60.000004
   orthographic: 0
@@ -892,6 +891,7 @@ GameObject:
   - component: {fileID: 7154501324431571667}
   - component: {fileID: 7085105705528025686}
   - component: {fileID: 7663611567481567527}
+  - component: {fileID: 4648684243280853150}
   - component: {fileID: 12164612205305895}
   m_Layer: 0
   m_Name: CinemachineCamera
@@ -908,13 +908,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7364072637101786338}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19922566, y: -0.0041906857, z: 0.00085197896, w: 0.97994435}
-  m_LocalPosition: {x: 0, y: 2.5985289, z: -1.3823452}
+  m_LocalRotation: {x: 0.20996897, y: -0.004181083, z: 0.0008979224, w: 0.97769874}
+  m_LocalPosition: {x: 0, y: 1.8319445, z: 0.5938177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 547102823084115808}
-  m_LocalEulerAnglesHint: {x: 24.361, y: -0.46, z: 0}
+  m_Father: {fileID: 6417670151752208896}
+  m_LocalEulerAnglesHint: {x: -37.685, y: -0.43, z: 0}
 --- !u!114 &7154501324431571667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,7 +941,7 @@ MonoBehaviour:
   Lens:
     FieldOfView: 60.000004
     OrthographicSize: 10
-    NearClipPlane: 0.1
+    NearClipPlane: 0.01
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -978,7 +978,7 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   OrbitStyle: 0
-  Radius: 5
+  Radius: 3
   Orbits:
     Top:
       Radius: 2
@@ -1002,7 +1002,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 17.5
+    Value: 10
     Center: 17.5
     Range: {x: -20, y: 40}
     Wrap: 0
@@ -1014,7 +1014,7 @@ MonoBehaviour:
   RadialAxis:
     Value: 1
     Center: 1
-    Range: {x: 1, y: 2.29}
+    Range: {x: 1, y: 1}
     Wrap: 0
     Recentering:
       Enabled: 0
@@ -1050,6 +1050,45 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!114 &4648684243280853150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364072637101786338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe43d662878a7c43bcd44d43c9e2094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDeoccluder
+  CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  IgnoreTag: Player
+  TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  MinimumDistanceFromTarget: 0.05
+  AvoidObstacles:
+    Enabled: 1
+    DistanceLimit: 0
+    MinimumOcclusionTime: 0
+    CameraRadius: 0.1
+    UseFollowTarget:
+      Enabled: 1
+      YOffset: 0.1
+    Strategy: 0
+    MaximumEffort: 4
+    SmoothingTime: 0
+    Damping: 0.4
+    DampingWhenOccluded: 0.2
+  ShotQualityEvaluation:
+    Enabled: 0
+    OptimalDistance: 10
+    NearLimit: 5
+    FarLimit: 30
+    MaxQualityBoost: 0.2
 --- !u!114 &12164612205305895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,7 +1130,7 @@ MonoBehaviour:
         DecelTime: 0.2
     - Name: Orbit Scale
       Owner: {fileID: 7085105705528025686}
-      Enabled: 1
+      Enabled: 0
       Input:
         InputAction: {fileID: 5082991133974614888, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
@@ -1127,7 +1166,7 @@ Transform:
   m_GameObject: {fileID: 8077736472928888328}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.685, z: 0}
+  m_LocalPosition: {x: 0, y: 0.901, z: 0.162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1164,6 +1203,7 @@ Transform:
   m_Children:
   - {fileID: 8356478641521242145}
   - {fileID: 8049127127172051890}
+  - {fileID: 8565538918282714321}
   - {fileID: 547102823084115808}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -56,9 +56,19 @@ public class TheHarpoon : MonoBehaviour
             else if (joinObj.tag == "Attracted")
             {
                 player.position = Vector3.MoveTowards(player.position, joinObj.position, harpoonForce * Time.deltaTime / player.GetComponent<Rigidbody>().mass);
+                RaycastHit hit;
+                Ray ray = new Ray(player.position, Vector3.down);
+                if (Physics.Raycast(ray, out hit, 0.8f))
+                {
+                    if (hit.transform.tag == "ToBeAttracted")
+                    {
+                        Vector3 newPos = new Vector3(joinObj.position.x, 0, joinObj.position.z);
+                        hit.transform.position = Vector3.MoveTowards(hit.transform.position, newPos, harpoonForce * Time.deltaTime / 5);
+                    }
+                }
             }
 
-            if (Vector3.Distance(player.position, joinObj.position) < 2.0f)
+            if (Vector3.Distance(player.position, joinObj.position) < platform.destroyDistance)
             {
                 player.GetComponent<HarpoonSpawn>().sent = false;
                 Destroy(gameObject);

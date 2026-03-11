@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4147551733403580943}
   - component: {fileID: 8750669227297470702}
   - component: {fileID: 3461423130289779290}
+  - component: {fileID: 985979819396579962}
   m_Layer: 0
   m_Name: Harpoon
   m_TagString: Untagged
@@ -152,3 +153,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff714fd2b13a27046ba4e7fb8f427d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TheHarpoon
+--- !u!114 &985979819396579962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2675662743518855366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1238ed4aafd8646a7dfeceec6c7f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffTheMap
