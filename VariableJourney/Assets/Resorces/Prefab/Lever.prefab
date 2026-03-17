@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 2712197563304775662}
   - component: {fileID: 1047927524058395043}
   - component: {fileID: 4823084393000401818}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lever
   m_TagString: Lever
   m_Icon: {fileID: 0}
@@ -278,4 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f152cf541ff4f54bae8e68f9c4b6d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObj
+  doors: []
+  platforms: []
   objEnable: 0

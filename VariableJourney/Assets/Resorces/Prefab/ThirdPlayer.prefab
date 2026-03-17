@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6557074113272729516}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HarpoonSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625417420085238587}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalRotation: {x: -0.17364825, y: 0, z: 0, w: 0.9848078}
   m_LocalPosition: {x: 0, y: 0.337, z: 0.459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8356478641521242145}
-  m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
 --- !u!1 &2315775745804948153
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6175800880876979611}
   - component: {fileID: 1612443393750772310}
   - component: {fileID: 5433138630324206950}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Appearance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 6027493360980847474}
   - component: {fileID: 5537189005822135167}
   - component: {fileID: 5522081605980398543}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 547102823084115808}
   - component: {fileID: 9143940839394375655}
   - component: {fileID: 1260091810125630043}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ClearShot Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 6784460279001753853}
   - component: {fileID: 3905590407668450109}
   - component: {fileID: 1186075276944112029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CinemachineCamera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 5125981564829025444}
   - component: {fileID: 4950610395812478468}
   - component: {fileID: 945866188227057411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -715,8 +715,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6293716784999834399}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09053893, y: -0.0042588497, z: 0.00038718543, w: 0.99588376}
-  m_LocalPosition: {x: 0, y: 2.5019445, z: -2.046183}
+  m_LocalRotation: {x: 0.0949385, y: -0.004183243, z: 0.00039895644, w: 0.9954743}
+  m_LocalPosition: {x: -0.00034236908, y: 2.338419, z: -1.4018898}
   m_LocalScale: {x: 0, y: 0.5828775, z: 1.7433188}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 7663611567481567527}
   - component: {fileID: 4648684243280853150}
   - component: {fileID: 12164612205305895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CinemachineCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,8 +908,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7364072637101786338}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09053893, y: -0.0042588497, z: 0.0003871854, w: 0.99588376}
-  m_LocalPosition: {x: 0, y: 2.5019445, z: -2.046183}
+  m_LocalRotation: {x: 0.0949385, y: -0.004183243, z: 0.00039895636, w: 0.9954743}
+  m_LocalPosition: {x: 0, y: 2.5019443, z: -2.046183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   VerticalAxis:
     Value: 10
     Center: 17.5
-    Range: {x: -30, y: 40}
+    Range: {x: -40, y: 40}
     Wrap: 0
     Recentering:
       Enabled: 0
@@ -1150,7 +1150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3512400607418957151}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CamTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6417670151752208896}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThirdPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

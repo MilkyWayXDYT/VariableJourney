@@ -128,6 +128,6 @@ public class Player : MonoBehaviour
 
         float distance = 0.3f;
 
-        return Physics.CapsuleCast(point1, point2, radius, direction, distance);
+        return Physics.CapsuleCast(point1, point2, radius, direction, distance, 6);
     }
 }

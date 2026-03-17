@@ -1,9 +1,11 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InteractiveObj : MonoBehaviour
 {
     [SerializeField] private Door[] doors;
+    [SerializeField] private Platform[] platforms;
 
     private GameObject player;
     private PlayerInput playerInput;
@@ -24,6 +26,15 @@ public class InteractiveObj : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player" && IndexCheck())
+        {
+            actionInteract.Enable();
+            other.GetComponent<Interaction>().interactiveObj = this;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player" && IndexCheck())
         {
@@ -54,9 +65,19 @@ public class InteractiveObj : MonoBehaviour
     {
         float rotate = objEnable ? 20 : -20;
         transform.Find("GameObject").localRotation = Quaternion.Euler(0, 0, rotate);
-        foreach (Door door in doors)
+        if (doors.Length > 0)
         {
-            door.DoorAction();
+            foreach (Door door in doors)
+            {
+                door.DoorAction();
+            }
+        }
+        else if (platforms.Length > 0)
+        {
+            foreach (Platform platform in platforms)
+            {
+                platform.PlatformMove();
+            }
         }
     }
 
