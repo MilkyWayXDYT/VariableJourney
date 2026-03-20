@@ -4,6 +4,7 @@ public class Platform : MonoBehaviour
 {
     public float harpoonForce = 10;
     public float destroyDistance = 2f;
+    public float moveDistance = 3f;
 
     private bool inUp = false;
     private Vector3 posTarget;
@@ -11,9 +12,9 @@ public class Platform : MonoBehaviour
     public void PlatformMove()
     {
         if (inUp)
-            posTarget = transform.position + Vector3.down * 3;
+            posTarget = transform.position + Vector3.down * moveDistance;
         else
-            posTarget = transform.position + Vector3.up * 3;
+            posTarget = transform.position + Vector3.up * moveDistance;
         inUp = !inUp;
     }
 

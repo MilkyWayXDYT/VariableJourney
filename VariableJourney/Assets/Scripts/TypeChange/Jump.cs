@@ -20,11 +20,6 @@ public class Jump : MonoBehaviour
         jumpAction.performed += Jumping;
     }
 
-    void Update()
-    {
-        Debug.DrawRay(transform.position, Vector2.down * jumpDistance, Color.red);
-    }
-
     private void Jumping(InputAction.CallbackContext callback)
     {
         if (callback.performed && InGround())
@@ -33,6 +28,8 @@ public class Jump : MonoBehaviour
             playerRb.AddForce(0, jumpVelocity, 0);
         }
     }
+
+    RaycastHit hitBox;
 
     private bool InGround()
     {
@@ -43,6 +40,30 @@ public class Jump : MonoBehaviour
         if (Physics.Raycast(ray, out hit, jumpDistance))
             result = true;
 
+        CapsuleCollider col = gameObject.GetComponent<CapsuleCollider>();
+        float radius = col.radius;
+
+        Vector3 center = transform.position + Vector3.down * (col.height / 2);
+        Vector3 halfExtendsSides = Vector3.one * radius * 1.5f;
+        Vector3 halfExtends = new Vector3(halfExtendsSides.x, 0.05f, halfExtendsSides.z);
+
+        if (Physics.BoxCast(center, halfExtends, Vector3.down, out hitBox))
+            result = true;
+
         return result;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+
+        CapsuleCollider col = gameObject.GetComponent<CapsuleCollider>();
+        float radius = col.radius;
+
+        Vector3 center = transform.position + Vector3.down * (col.height / 2);
+        Vector3 halfExtendsSides = Vector3.one * radius * 1.5f;
+        Vector3 halfExtends = new Vector3(halfExtendsSides.x, 0.05f, halfExtendsSides.z);
+
+        Gizmos.DrawWireCube(center, halfExtends);
     }
 }
