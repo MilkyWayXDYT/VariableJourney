@@ -1071,6 +1071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DisappearPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4663914503513827620, guid: 9a76ecbbd3eb65541a3800ce1ef12ccf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3605,6 +3609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718170757}
+  - component: {fileID: 718170758}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -3631,6 +3636,18 @@ Transform:
   - {fileID: 774011677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718170758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718170756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ef7baf96066814b8e68b58eccbbdbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimerRestart
 --- !u!1 &731203812
 GameObject:
   m_ObjectHideFlags: 0
@@ -5585,11 +5602,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 27465578454666257, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 738393099253966600, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2712197563304775662, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5633,7 +5650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3123004464890949289, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3750343115102113660, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_Name
@@ -5641,7 +5658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3750343115102113660, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4823084393000401818, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: platforms.Array.size
@@ -6493,7 +6510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8899461690391881067, guid: 9589e44acb2a57c418d8b7fcfce35d54, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6988,7 +7005,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.17
+      value: 9.82
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6996,7 +7013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.34
+      value: -27.1
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9319,7 +9336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8899461690391881067, guid: 9589e44acb2a57c418d8b7fcfce35d54, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
