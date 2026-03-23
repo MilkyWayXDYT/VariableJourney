@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class TimerRestart : MonoBehaviour
 {
-    private float timer = 240f;
+    private float timer = 210f;
 
     private void Update()
     {
