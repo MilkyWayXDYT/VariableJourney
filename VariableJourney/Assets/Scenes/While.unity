@@ -704,7 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   harpoonForce: 10
   destroyDistance: 2
-  moveDistance: 4.5
+  moveDistance: 4
 --- !u!1001 &97282649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2040,7 +2040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   harpoonForce: 10
   destroyDistance: 2
-  moveDistance: 4.5
+  moveDistance: 4
 --- !u!1001 &381675761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2052,6 +2052,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3337,6 +3341,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4626,7 +4634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   harpoonForce: 10
   destroyDistance: 2
-  moveDistance: 4.5
+  moveDistance: 4
 --- !u!1 &1017229229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5013,6 +5021,10 @@ PrefabInstance:
     - target: {fileID: 8899461690391881067, guid: 9589e44acb2a57c418d8b7fcfce35d54, type: 3}
       propertyPath: m_Name
       value: Platform (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899461690391881067, guid: 9589e44acb2a57c418d8b7fcfce35d54, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8899461690391881067, guid: 9589e44acb2a57c418d8b7fcfce35d54, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7321,7 +7333,7 @@ GameObject:
   - component: {fileID: 1522168971}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9062,7 +9074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   harpoonForce: 10
   destroyDistance: 2
-  moveDistance: 4.5
+  moveDistance: 4
 --- !u!1001 &1927018002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10031,6 +10043,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
