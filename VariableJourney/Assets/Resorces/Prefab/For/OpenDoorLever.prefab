@@ -221,8 +221,9 @@ GameObject:
   - component: {fileID: 2712197563304775662}
   - component: {fileID: 1047927524058395043}
   - component: {fileID: 4823084393000401818}
+  - component: {fileID: -5647145410193383572}
   m_Layer: 6
-  m_Name: Lever
+  m_Name: OpenDoorLever
   m_TagString: Lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,3 +282,15 @@ MonoBehaviour:
   doors: []
   platforms: []
   objEnable: 0
+--- !u!114 &-5647145410193383572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750343115102113660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f2711a5f49d214ca9a36c04149e010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpenDoorLever

@@ -65,6 +65,7 @@ public class InteractiveObj : MonoBehaviour
     {
         float rotate = objEnable ? 20 : -20;
         transform.Find("GameObject").localRotation = Quaternion.Euler(0, 0, rotate);
+        OpenDoorLever openDoor = GetComponent<OpenDoorLever>();
         if (doors.Length > 0)
         {
             foreach (Door door in doors)
@@ -79,9 +80,16 @@ public class InteractiveObj : MonoBehaviour
                 platform.PlatformMove();
             }
         }
+        else  if (openDoor)
+        {
+            openDoor.OpenDoor();
+        }
+
     }
 
     private void Opening()
     {
+        var roomsDoor = GetComponent<InteractDoor>();
+        roomsDoor.DoorOpen();
     }
 }
