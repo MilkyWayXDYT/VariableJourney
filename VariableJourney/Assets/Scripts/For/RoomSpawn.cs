@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class RoomSpawn : MonoBehaviour
 {
@@ -17,7 +18,9 @@ public class RoomSpawn : MonoBehaviour
     [SerializeField]
     private GameObject puzzleRoom;
     [SerializeField]
-    private GameObject startRoom; 
+    private GameObject startRoom;
+    [SerializeField]
+    private GameObject simpleDoor;
 
     private List<GameObject> rooms;
     private int simpleRoomCount, hallwayCount, randomLeverRoomCount, puzzleRoomCount;
@@ -97,9 +100,23 @@ public class RoomSpawn : MonoBehaviour
 
     public void Spawn(Transform door)
     {
-        currentRooms.Add(rooms[lastRoom - 1]);
+        //currentRooms.Add(rooms[lastRoom - 1]);
         Transform spawnPoint = door.parent;
         lastRoom++;
-        Instantiate(currentRooms[currentRooms.Count - 1], spawnPoint.position, spawnPoint.rotation);
+        GameObject newRoom = Instantiate(rooms[lastRoom - 1], spawnPoint.position, spawnPoint.rotation);
+        currentRooms.Add(newRoom);
+
+        if (currentRooms.Count > 2)
+        {
+            Transform firstDoorPoint = currentRooms[1].GetComponentsInChildren<Transform>().FirstOrDefault(p => p.name == "DoorStart");
+            GameObject blockDoor = Instantiate(simpleDoor, firstDoorPoint);
+            RoomDelete();
+        }
+    }
+
+    public void RoomDelete()
+    {
+        Destroy(currentRooms[0]);
+        currentRooms.RemoveAt(0);
     }
 }
