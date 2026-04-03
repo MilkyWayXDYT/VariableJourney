@@ -100,7 +100,6 @@ public class RoomSpawn : MonoBehaviour
 
     public void Spawn(Transform door)
     {
-        //currentRooms.Add(rooms[lastRoom - 1]);
         Transform spawnPoint = door.parent;
         lastRoom++;
         GameObject newRoom = Instantiate(rooms[lastRoom - 1], spawnPoint.position, spawnPoint.rotation);

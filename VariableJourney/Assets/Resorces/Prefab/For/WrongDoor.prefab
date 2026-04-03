@@ -368,6 +368,7 @@ MonoBehaviour:
   doors: []
   platforms: []
   objEnable: 0
+  isGlitch: 1
 --- !u!65 &6959642493374359237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -401,3 +402,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec86887d19174da43823670df0a60bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
+  roomSpawn: {fileID: 0}

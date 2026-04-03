@@ -12,6 +12,7 @@ public class InteractiveObj : MonoBehaviour
     private InputAction actionInteract;
 
     public bool objEnable = false;
+    public bool isGlitch = false;
 
     private void Start()
     {
@@ -84,7 +85,16 @@ public class InteractiveObj : MonoBehaviour
         {
             openDoor.OpenDoor();
         }
-
+        Transform puzzleRoom = GetComponentsInParent<Transform>().FirstOrDefault(r => r.name == "ThePuzzleRoom(Clone)");
+        if (puzzleRoom)
+        {
+            var createDoor = puzzleRoom.GetComponent<CreateDoorFromLevers>();
+            if (objEnable)
+                createDoor.enableLevers++;
+            else
+                createDoor.enableLevers--;
+            createDoor.LeverPress();
+        }
     }
 
     private void Opening()

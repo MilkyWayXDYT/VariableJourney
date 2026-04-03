@@ -468,7 +468,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3399
+  m_VersionIndex: 3444
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -716,7 +716,8 @@ Transform:
   m_LocalPosition: {x: 0.983, y: -0.284, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3262650355181013350}
   m_Father: {fileID: 1059184962969594843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2768171005811608261
@@ -1018,6 +1019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3799640400294894865}
   - component: {fileID: 3565073209197202612}
+  - component: {fileID: 3326041745182620035}
   m_Layer: 0
   m_Name: ThePuzzleRoom
   m_TagString: Untagged
@@ -1054,7 +1056,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7593943967725350648}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec5756219abce50478ba12e4805683c5, type: 3}
   m_Name: 
@@ -1064,6 +1066,22 @@ MonoBehaviour:
   rightDoorPrefab: {fileID: 667252757974031836, guid: f6c8169a0d289ed4b818bb50acbc06f4, type: 3}
   wrongDoorPrefab: {fileID: 0}
   simpleDoorPrefab: {fileID: 0}
+--- !u!114 &3326041745182620035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7593943967725350648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533aeff3b8e6c2d4fb589d266cb53a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreateDoorFromLevers
+  levers: []
+  rightDoorPref: {fileID: 667252757974031836, guid: f6c8169a0d289ed4b818bb50acbc06f4, type: 3}
+  wrongDoorPref: {fileID: 667252757974031836, guid: f61e5f68a9dbafa468802235686c9880, type: 3}
+  rightDoor: 1
 --- !u!1 &8164184747282229855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,7 +1550,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3269
+  m_VersionIndex: 3314
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1802,7 +1820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3750343115102113660, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_Name
-      value: Lever (2)
+      value: Lever
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1864,7 +1882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3750343115102113660, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_Name
-      value: Lever (4)
+      value: Lever
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1938,6 +1956,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2712197563304775662, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
   m_PrefabInstance: {fileID: 2856073583687067193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3408694144554274304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7689880561896723980}
+    m_Modifications:
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667252757974031836, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+      propertyPath: m_Name
+      value: SimpleDoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+--- !u!4 &3262650355181013350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 146752321697695590, guid: 9768a18e2255fba43b792d62144dc0e9, type: 3}
+  m_PrefabInstance: {fileID: 3408694144554274304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5349618567605450757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1988,7 +2068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3750343115102113660, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_Name
-      value: Lever (1)
+      value: Lever
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2050,7 +2130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3750343115102113660, guid: 01c33296dd4b6c34ba9e4eb829cccdf6, type: 3}
       propertyPath: m_Name
-      value: Lever (3)
+      value: Lever
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
