@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class RoomSpawn : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class RoomSpawn : MonoBehaviour
 
     private int lastRoom = 1;
     private List<GameObject> currentRooms;
+
+    private bool timerStart;
+    private float restartTimer = 3f;
 
     System.Random rand = new System.Random();
 
@@ -75,6 +79,14 @@ public class RoomSpawn : MonoBehaviour
         currentRooms.Add(startRoom);
     }
 
+    private void Update()
+    {
+        if (timerStart)
+            restartTimer -= Time.deltaTime;
+        if (restartTimer < 0)
+            SceneManager.LoadScene(3);
+    }
+
     private void RoomsFilling()
     {
         for (int i = 0; i < simpleRoomCount; i++)
@@ -100,6 +112,11 @@ public class RoomSpawn : MonoBehaviour
 
     public void Spawn(Transform door)
     {
+        InteractiveObj isGlitchDoor = door.GetComponent<InteractiveObj>();
+
+        if (isGlitchDoor)
+            timerStart = isGlitchDoor.isGlitch;
+
         Transform spawnPoint = door.parent;
         lastRoom++;
         GameObject newRoom = Instantiate(rooms[lastRoom - 1], spawnPoint.position, spawnPoint.rotation);

@@ -45,6 +45,8 @@ public class CreateDoorFromLevers : MonoBehaviour
     {
         Transform door = doorEndPoint.GetComponentInChildren<Transform>();
         Destroy(door.GetComponentsInChildren<Transform>()[1].gameObject);
+        rightDoor = true;
+
         foreach (var lever in levers)
         {
             InteractiveObj leverInteractive = lever.GetComponent<InteractiveObj>();
