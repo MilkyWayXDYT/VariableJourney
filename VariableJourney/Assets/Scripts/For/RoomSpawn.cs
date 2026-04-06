@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class RoomSpawn : MonoBehaviour
 {
     public int roomsCount = 15;
+    public int lastRoom = 1;
 
     [SerializeField]
     private GameObject simpleRoom;
@@ -21,12 +22,13 @@ public class RoomSpawn : MonoBehaviour
     [SerializeField]
     private GameObject startRoom;
     [SerializeField]
+    private GameObject endRoom;
+    [SerializeField]
     private GameObject simpleDoor;
 
     private List<GameObject> rooms;
     private int simpleRoomCount, hallwayCount, randomLeverRoomCount, puzzleRoomCount;
 
-    private int lastRoom = 1;
     private List<GameObject> currentRooms;
 
     private bool timerStart;
@@ -39,37 +41,37 @@ public class RoomSpawn : MonoBehaviour
         if (roomsCount == 15)
         {
             simpleRoomCount = 4;
-            puzzleRoomCount = 4;
+            puzzleRoomCount = 5;
             hallwayCount = 2;
-            randomLeverRoomCount = 3;
+            randomLeverRoomCount = 4;
         }
         else if (roomsCount == 23)
         {
             simpleRoomCount = 6;
-            puzzleRoomCount = 6;
+            puzzleRoomCount = 7;
             hallwayCount = 4;
-            randomLeverRoomCount = 5;
+            randomLeverRoomCount = 6;
         }
         else if (roomsCount == 27)
         {
             simpleRoomCount = 7;
-            puzzleRoomCount = 7;
+            puzzleRoomCount = 8;
             hallwayCount = 5;
-            randomLeverRoomCount = 6;
+            randomLeverRoomCount = 7;
         }
         else if (roomsCount == 29)
         {
             simpleRoomCount = 8;
-            puzzleRoomCount = 7;
+            puzzleRoomCount = 8;
             hallwayCount = 5;
-            randomLeverRoomCount = 7;
+            randomLeverRoomCount = 8;
         }
         else if (roomsCount == 30)
         {
             simpleRoomCount = 8;
-            puzzleRoomCount = 8;
+            puzzleRoomCount = 9;
             hallwayCount = 5;
-            randomLeverRoomCount = 7;
+            randomLeverRoomCount = 8;
         }
         rooms = new List<GameObject>();
         currentRooms = new List<GameObject>();
@@ -77,6 +79,7 @@ public class RoomSpawn : MonoBehaviour
         RoomsFilling();
         RoomRandomizing();
         currentRooms.Add(startRoom);
+        rooms.Insert(rooms.Count - 2, hallway);
     }
 
     private void Update()
@@ -119,7 +122,7 @@ public class RoomSpawn : MonoBehaviour
 
         Transform spawnPoint = door.parent;
         lastRoom++;
-        GameObject newRoom = Instantiate(rooms[lastRoom - 1], spawnPoint.position, spawnPoint.rotation);
+        GameObject newRoom = Instantiate(rooms[lastRoom - 2], spawnPoint.position, spawnPoint.rotation);
         currentRooms.Add(newRoom);
 
         if (currentRooms.Count > 2)
