@@ -7,6 +7,8 @@ public class Jump : MonoBehaviour
     private float jumpVelocity;
     [SerializeField]
     private float jumpDistance = 1.5f;
+    [SerializeField]
+    private LayerMask groundLayer;
 
     private PlayerInput playerInput;
     private InputAction jumpAction;
@@ -40,35 +42,33 @@ public class Jump : MonoBehaviour
     {
         bool result = false;
 
-        RaycastHit hit;
-        Ray ray = new Ray(transform.position, Vector3.down);
-        if (Physics.Raycast(ray, out hit, jumpDistance))
-            result = true;
-
-        //CapsuleCollider col = gameObject.GetComponent<CapsuleCollider>();
-        //float radius = col.radius;
-
-        //Vector3 center = transform.position + Vector3.down * (col.height / 2 + 0.03f);
-        //Vector3 halfExtendsSides = Vector3.one * radius * 1.5f;
-        //Vector3 halfExtends = new Vector3(halfExtendsSides.x, 0.05f, halfExtendsSides.z);
-
-        //if (Physics.BoxCast(center, halfExtends, Vector3.down, out hitBox))
+        //RaycastHit hit;
+        //Ray ray = new Ray(transform.position, Vector3.down);
+        //if (Physics.Raycast(ray, out hit, jumpDistance))
         //    result = true;
+
+        CapsuleCollider col = gameObject.GetComponent<CapsuleCollider>();
+        float radius = col.radius;
+
+        Vector3 center = transform.position + Vector3.down * (col.height / 2 + 0.03f);
+        Vector3 halfExtendsSides = Vector3.one * radius * 1.5f * 2f;
+        Vector3 halfExtends = new Vector3(halfExtendsSides.x, 0.05f, halfExtendsSides.z);
+
+        if (Physics.CheckBox(center, halfExtends, Quaternion.identity, groundLayer))
+            result = true;
 
         return result;
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.green;
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = InGround() ? Color.green : Color.red;
+        CapsuleCollider col = gameObject.GetComponent<CapsuleCollider>();
+        float radius = col.radius;
 
-    //    CapsuleCollider col = gameObject.GetComponent<CapsuleCollider>();
-    //    float radius = col.radius;
-
-    //    Vector3 center = transform.position + Vector3.down * (col.height / 2 + 0.03f);
-    //    Vector3 halfExtendsSides = Vector3.one * radius * 1.5f;
-    //    Vector3 halfExtends = new Vector3(halfExtendsSides.x, 0.05f, halfExtendsSides.z);
-
-    //    Gizmos.DrawWireCube(center, halfExtends);
-    //}
+        Vector3 center = transform.position + Vector3.down * (col.height / 2 + 0.03f);
+        Vector3 halfExtendsSides = Vector3.one * radius * 1.5f * 2f;
+        Vector3 halfExtends = new Vector3(halfExtendsSides.x, 0.05f, halfExtendsSides.z);
+        Gizmos.DrawWireCube(center, halfExtends / 2);
+    }
 }

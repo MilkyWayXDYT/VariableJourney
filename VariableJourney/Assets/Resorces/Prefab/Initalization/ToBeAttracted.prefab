@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8324847333870318993}
   - component: {fileID: 2797407703385492596}
   - component: {fileID: 5167180067238217753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ToBeAttracted
   m_TagString: ToBeAttracted
   m_Icon: {fileID: 0}
@@ -154,3 +154,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   harpoonForce: 10
   destroyDistance: 2
+  moveDistance: 3

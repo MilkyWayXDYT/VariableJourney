@@ -6931,13 +6931,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 916521997116578087, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.82
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.121
+      value: 0.155
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6977,11 +6981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8049127127172051890, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5019445
+      value: 2.5019443
       objectReference: {fileID: 0}
     - target: {fileID: 8049127127172051890, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.0461836
+      value: -2.2081833
       objectReference: {fileID: 0}
     - target: {fileID: 8049127127172051890, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7002,6 +7006,10 @@ PrefabInstance:
     - target: {fileID: 8497330081356878838, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_Name
       value: ThirdPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565538918282714321, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2081833
       objectReference: {fileID: 0}
     - target: {fileID: 8565538918282714321, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7331,7 +7339,7 @@ GameObject:
   - component: {fileID: 1522168973}
   - component: {fileID: 1522168972}
   - component: {fileID: 1522168971}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Ground
   m_Icon: {fileID: 0}

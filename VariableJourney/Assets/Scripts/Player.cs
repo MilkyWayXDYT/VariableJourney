@@ -21,6 +21,12 @@ public class Player : MonoBehaviour
 
     private LineController lineController;
 
+    [SerializeField] 
+    private bool lockCursorOnStart = true;
+    [SerializeField] 
+    private bool lockOnMouseClick = true;
+    private bool cursorLocked = true;
+
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -32,6 +38,12 @@ public class Player : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "TypingLevel")
             lineController = GameObject.Find("Start").GetComponent<LineController>();
+
+        if (lockCursorOnStart)
+        {
+            cursorLocked = true;
+            UpdateCursorLock();
+        }
     }
 
     void FixedUpdate()
@@ -129,5 +141,26 @@ public class Player : MonoBehaviour
         float distance = 0.3f;
 
         return Physics.CapsuleCast(point1, point2, radius, direction, distance, 6);
+    }
+
+    private void Update()
+    {
+        if ((Gamepad.current != null && Gamepad.current.leftStickButton.wasPressedThisFrame) ||
+            Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            cursorLocked = !cursorLocked;
+            UpdateCursorLock();
+        }
+        else if (lockOnMouseClick && !cursorLocked && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            cursorLocked = true;
+            UpdateCursorLock();
+        }
+    }
+
+    private void UpdateCursorLock()
+    {
+        Cursor.lockState = cursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !cursorLocked;
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -43,6 +44,7 @@ public class CreateDoorFromLevers : MonoBehaviour
 
     private void CreateDoor()
     {
+        RoomSpawn roomSpawn = GameObject.Find("RoomsSpawn").GetComponent<RoomSpawn>();
         Transform door = doorEndPoint.GetComponentInChildren<Transform>();
         Destroy(door.GetComponentsInChildren<Transform>()[1].gameObject);
         rightDoor = true;
@@ -54,8 +56,16 @@ public class CreateDoorFromLevers : MonoBehaviour
                 rightDoor = false;
         }
         if (rightDoor)
-            Instantiate(rightDoorPref, doorEndPoint);
+        {
+            GameObject newDoor = Instantiate(rightDoorPref, doorEndPoint);
+            TMP_Text doorNum = newDoor.GetComponentInChildren<TMP_Text>();
+            doorNum.text = (roomSpawn.lastRoom + 1).ToString();
+        }
         else
-            Instantiate(wrongDoorPref, doorEndPoint);
+        {
+            GameObject newDoor = Instantiate(wrongDoorPref, doorEndPoint);
+            TMP_Text doorNum = newDoor.GetComponentInChildren<TMP_Text>();
+            doorNum.text = roomSpawn.lastRoom.ToString();
+        }
     }
 }

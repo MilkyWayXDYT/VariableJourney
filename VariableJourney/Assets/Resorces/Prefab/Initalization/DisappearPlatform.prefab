@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3326920576646328226}
   - component: {fileID: 7591059056517047343}
   - component: {fileID: 6208650357159114690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DisappearPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,3 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b15dea0e5e3894c8dccf6e0d8fe8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlatformDisappearing
+  defTimer: 1

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DoorSpawn : MonoBehaviour
@@ -20,6 +21,7 @@ public class DoorSpawn : MonoBehaviour
 
     private void Start()
     {
+        RoomSpawn roomSpawn = GameObject.Find("RoomsSpawn").GetComponent<RoomSpawn>();
         if (pointsForDoorSpawn != null)
         {
             List<int> forRand = new List<int> { 0, 1, 2, 3, 4 };
@@ -33,7 +35,6 @@ public class DoorSpawn : MonoBehaviour
             forRand.RemoveAt(wrongRandIndex);
 
 
-            RoomSpawn roomSpawn = GameObject.Find("RoomsSpawn").GetComponent<RoomSpawn>();
             int lastRand = -1;
             if (roomSpawn.lastRoom == roomSpawn.roomsCount)
             {
@@ -47,15 +48,26 @@ public class DoorSpawn : MonoBehaviour
                 if (i == rightRand)
                 {
                     GameObject newDoor = Instantiate(rightDoorPrefab, pointsForDoorSpawn[i]);
+                    TMP_Text doorNum = newDoor.GetComponentInChildren<TMP_Text>();
+                    doorNum.text = (roomSpawn.lastRoom + 1).ToString();
                     if (isLastRoom)
                     {
                         newDoor.GetComponent<InteractiveObj>().isGlitch = true;
                     }
                 }
                 else if (i == wrongRand)
-                    Instantiate(wrongDoorPrefab, pointsForDoorSpawn[i]);
+                {
+                    GameObject newDoor = Instantiate(wrongDoorPrefab, pointsForDoorSpawn[i]);
+                    TMP_Text doorNum = newDoor.GetComponentInChildren<TMP_Text>();
+                    doorNum.text = roomSpawn.lastRoom.ToString();
+                }
                 else if (isLastRoom && lastDoor && i == lastRand)
-                    Instantiate(lastDoor, pointsForDoorSpawn[i]);
+                {
+                    GameObject newDoor = Instantiate(lastDoor, pointsForDoorSpawn[i]);
+                    TMP_Text doorNum = newDoor.GetComponentInChildren<TMP_Text>();
+                    doorNum.text = "End";
+                    //doorNum.text = roomSpawn.lastRoom.ToString();
+                }
                 else
                     Instantiate(simpleDoorPrefab, pointsForDoorSpawn[i]);
             }
@@ -63,7 +75,9 @@ public class DoorSpawn : MonoBehaviour
 
         if (endDoorSpawn != null)
         {
-            Instantiate(rightDoorPrefab, endDoorSpawn);
+            GameObject newDoor = Instantiate(rightDoorPrefab, endDoorSpawn);
+            TMP_Text doorNum = newDoor.GetComponentInChildren<TMP_Text>();
+            doorNum.text = (roomSpawn.lastRoom + 1).ToString();
         }
     }
 }
