@@ -204,7 +204,10 @@ MonoBehaviour:
   speed: 3.5
   acceleration: 20
   cameraTransform: {fileID: 8049127127172051890}
+  dist: 0
   maxDistance: 0
+  lockCursorOnStart: 1
+  lockOnMouseClick: 1
 --- !u!114 &3398199188910731365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +361,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Jump
   jumpVelocity: 500
   jumpDistance: 0.8
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &6027493360980847474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +397,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2416473387440813402}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 58803c389c3f77246807c1a69b990941, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1064,7 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDeoccluder
   CollideAgainst:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 3221225719
   IgnoreTag: Player
   TransparentLayers:
     serializedVersion: 2

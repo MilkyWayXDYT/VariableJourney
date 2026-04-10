@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     private bool lockOnMouseClick = true;
     private bool cursorLocked = true;
 
+    private bool isTouching = false;
+
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -63,8 +65,7 @@ public class Player : MonoBehaviour
         if (moveAction.inProgress)
             targetRotation = Quaternion.LookRotation(moveDirection);
 
-        if (!IsWallAhead(moveDirection.normalized))
-            playerRb.AddForce(moveDirection.normalized * playerRb.mass * speed * acceleration, ForceMode.Force);
+        playerRb.AddForce(moveDirection.normalized * playerRb.mass * speed * acceleration, ForceMode.Force);
 
         Vector3 horizontalVelocity = new Vector3(playerRb.linearVelocity.x, 0, playerRb.linearVelocity.z);
         if (horizontalVelocity.magnitude > speed)
@@ -124,23 +125,6 @@ public class Player : MonoBehaviour
             result = true;
 
         return result;
-    }
-
-    bool IsWallAhead(Vector3 direction)
-    {
-        CapsuleCollider col = GetComponent<CapsuleCollider>();
-
-        float radius = col.radius * 0.9f;
-        float height = col.height;
-
-        Vector3 center = transform.position + col.center;
-
-        Vector3 point1 = center + Vector3.up * (height / 2 - radius);
-        Vector3 point2 = center - Vector3.up * (height / 2 - radius);
-
-        float distance = 0.3f;
-
-        return Physics.CapsuleCast(point1, point2, radius, direction, distance, 6);
     }
 
     private void Update()

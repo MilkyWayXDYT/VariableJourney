@@ -193,6 +193,10 @@ PrefabInstance:
       value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -260,7 +264,7 @@ GameObject:
   - component: {fileID: 47560637}
   - component: {fileID: 47560636}
   - component: {fileID: 47560635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,6 +397,10 @@ PrefabInstance:
       value: Attracted
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -452,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -525,6 +537,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -716,6 +732,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -946,6 +966,10 @@ PrefabInstance:
       value: Wall (28)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1092,7 +1116,7 @@ GameObject:
   - component: {fileID: 159689741}
   - component: {fileID: 159689740}
   - component: {fileID: 159689739}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1203,7 +1227,7 @@ GameObject:
   - component: {fileID: 176357613}
   - component: {fileID: 176357615}
   - component: {fileID: 176357614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1337,6 +1361,10 @@ PrefabInstance:
       value: Wall (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1409,7 +1437,7 @@ GameObject:
   - component: {fileID: 227405272}
   - component: {fileID: 227405271}
   - component: {fileID: 227405270}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1539,7 +1567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 250323532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +1801,7 @@ GameObject:
   - component: {fileID: 315776075}
   - component: {fileID: 315776077}
   - component: {fileID: 315776076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2054,6 +2082,10 @@ PrefabInstance:
       value: Wall (10)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -2129,7 +2161,7 @@ GameObject:
   - component: {fileID: 385053240}
   - component: {fileID: 385053242}
   - component: {fileID: 385053241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2261,7 +2293,7 @@ GameObject:
   - component: {fileID: 423305247}
   - component: {fileID: 423305246}
   - component: {fileID: 423305245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2389,7 +2421,7 @@ GameObject:
   - component: {fileID: 444007281}
   - component: {fileID: 444007280}
   - component: {fileID: 444007279}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2517,6 +2549,10 @@ PrefabInstance:
       value: Wall (14)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2602,6 +2638,10 @@ PrefabInstance:
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_Name
       value: Attracted
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2733,7 +2773,7 @@ GameObject:
   - component: {fileID: 524154606}
   - component: {fileID: 524154608}
   - component: {fileID: 524154607}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2860,6 +2900,10 @@ PrefabInstance:
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_Name
       value: Attracted (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3054,6 +3098,10 @@ PrefabInstance:
       value: Wall (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3121,7 +3169,7 @@ GameObject:
   - component: {fileID: 639856161}
   - component: {fileID: 639856163}
   - component: {fileID: 639856162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3343,6 +3391,10 @@ PrefabInstance:
       value: Wall (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -3429,7 +3481,7 @@ GameObject:
   - component: {fileID: 713055929}
   - component: {fileID: 713055928}
   - component: {fileID: 713055927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3539,7 +3591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718170757}
   - component: {fileID: 718170758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3588,7 +3640,7 @@ GameObject:
   - component: {fileID: 731203813}
   - component: {fileID: 731203815}
   - component: {fileID: 731203814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3718,7 +3770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 774011677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Obtacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3754,6 +3806,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3873,6 +3929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6909257544191843640, guid: ebec317ddf1799d428c2e796cd47f7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3887,7 +3947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 793077635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interactive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3935,6 +3995,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4019,6 +4083,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4133,6 +4201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bit
       objectReference: {fileID: 0}
+    - target: {fileID: 6909257544191843640, guid: ebec317ddf1799d428c2e796cd47f7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4224,7 +4296,7 @@ GameObject:
   - component: {fileID: 901301602}
   - component: {fileID: 901301604}
   - component: {fileID: 901301603}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4357,6 +4429,10 @@ PrefabInstance:
       value: Attracted
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4421,6 +4497,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4711,7 +4791,7 @@ GameObject:
   - component: {fileID: 1021719276}
   - component: {fileID: 1021719278}
   - component: {fileID: 1021719277}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4838,6 +4918,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5044,7 +5128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1079116615}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5159,6 +5243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bit
       objectReference: {fileID: 0}
+    - target: {fileID: 6909257544191843640, guid: ebec317ddf1799d428c2e796cd47f7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5255,6 +5343,10 @@ PrefabInstance:
       value: Wall (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5328,6 +5420,10 @@ PrefabInstance:
       value: Wall (11)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5399,7 +5495,7 @@ GameObject:
   - component: {fileID: 1182474955}
   - component: {fileID: 1182474957}
   - component: {fileID: 1182474956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5705,7 +5801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1274727420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Simple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5754,7 +5850,7 @@ GameObject:
   - component: {fileID: 1275192371}
   - component: {fileID: 1275192370}
   - component: {fileID: 1275192369}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5937,7 +6033,7 @@ GameObject:
   - component: {fileID: 1326870447}
   - component: {fileID: 1326870446}
   - component: {fileID: 1326870445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6125,6 +6221,10 @@ PrefabInstance:
       value: Wall (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6196,6 +6296,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6470,7 +6574,7 @@ GameObject:
   - component: {fileID: 1426614954}
   - component: {fileID: 1426614953}
   - component: {fileID: 1426614952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6584,7 +6688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466939534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6637,6 +6741,10 @@ PrefabInstance:
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_Name
       value: Attracted (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6702,7 +6810,7 @@ GameObject:
   - component: {fileID: 1471350442}
   - component: {fileID: 1471350441}
   - component: {fileID: 1471350440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6829,6 +6937,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7045,6 +7157,10 @@ PrefabInstance:
       value: Wall (23)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7119,6 +7235,10 @@ PrefabInstance:
       value: Wall (26)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7191,6 +7311,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7269,6 +7393,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7450,7 +7578,7 @@ GameObject:
   - component: {fileID: 1549914411}
   - component: {fileID: 1549914410}
   - component: {fileID: 1549914409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7578,7 +7706,7 @@ GameObject:
   - component: {fileID: 1571325715}
   - component: {fileID: 1571325714}
   - component: {fileID: 1571325713}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7754,7 +7882,7 @@ GameObject:
   - component: {fileID: 1599682339}
   - component: {fileID: 1599682338}
   - component: {fileID: 1599682337}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7983,6 +8111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bit (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6909257544191843640, guid: ebec317ddf1799d428c2e796cd47f7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7999,6 +8131,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8078,7 +8214,7 @@ GameObject:
   - component: {fileID: 1627912434}
   - component: {fileID: 1627912436}
   - component: {fileID: 1627912435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8211,7 +8347,7 @@ GameObject:
   - component: {fileID: 1639571270}
   - component: {fileID: 1639571269}
   - component: {fileID: 1639571268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8393,6 +8529,10 @@ PrefabInstance:
       value: Attracted (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -8452,6 +8592,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8526,6 +8670,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8640,6 +8788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bit (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6909257544191843640, guid: ebec317ddf1799d428c2e796cd47f7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8656,7 +8808,7 @@ GameObject:
   - component: {fileID: 1702108389}
   - component: {fileID: 1702108388}
   - component: {fileID: 1702108387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8785,6 +8937,10 @@ PrefabInstance:
       value: Wall (27)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -8869,7 +9025,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1810768768}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8937,7 +9093,7 @@ GameObject:
   - component: {fileID: 1876533088}
   - component: {fileID: 1876533090}
   - component: {fileID: 1876533089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9096,6 +9252,10 @@ PrefabInstance:
       value: Wall (17)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9236,7 +9396,7 @@ GameObject:
   - component: {fileID: 1971574009}
   - component: {fileID: 1971574011}
   - component: {fileID: 1971574010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9365,6 +9525,10 @@ PrefabInstance:
       value: Attracted (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9436,7 +9600,7 @@ GameObject:
   - component: {fileID: 1994238724}
   - component: {fileID: 1994238726}
   - component: {fileID: 1994238725}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9778,6 +9942,10 @@ PrefabInstance:
       value: Attracted (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559776932833583878, guid: c0a0c05a4db707e40b9a6bbf8f18c3fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9970,6 +10138,10 @@ PrefabInstance:
       value: Wall (19)
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10051,6 +10223,10 @@ PrefabInstance:
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_Name
       value: Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2290888036346488136, guid: cbede485dc358fe4e9e4c3d3401f9288, type: 3}
       propertyPath: m_TagString
