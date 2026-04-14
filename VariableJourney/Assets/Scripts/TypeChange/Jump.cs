@@ -31,7 +31,7 @@ public class Jump : MonoBehaviour
     {
         if (callback.performed && InGround())
         {
-            Debug.Log(callback.performed.ToString());
+            //Debug.Log(callback.performed.ToString());
             playerRb.AddForce(0, jumpVelocity, 0);
         }
     }
