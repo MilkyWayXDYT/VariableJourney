@@ -10,6 +10,7 @@ public class TypeSwitch : MonoBehaviour
     private InputAction nextAction, previousAction, jumpAction, interactionAction, harpoonAction;
 
     public int typeIndex = 0;
+    public int typeCount = 0;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class TypeSwitch : MonoBehaviour
     private void NextType(InputAction.CallbackContext context)
     {
         typeIndex++;
-        if (typeIndex > 2) typeIndex = 0;
+        if (typeIndex > typeCount) typeIndex = 0;
         CheckEnableScript();
         SetType();
     }
@@ -43,7 +44,7 @@ public class TypeSwitch : MonoBehaviour
     private void PrevType(InputAction.CallbackContext context)
     {
         typeIndex--;
-        if (typeIndex < 0) typeIndex = 2;
+        if (typeIndex < 0) typeIndex = typeCount;
         CheckEnableScript();
         SetType();
 

@@ -62,6 +62,6 @@ public class Button : MonoBehaviour
 
     private Vector3 RandDirection()
     {
-        return new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f));
+        return new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f));
     }
 }

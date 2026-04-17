@@ -27,8 +27,6 @@ public class Player : MonoBehaviour
     private bool lockOnMouseClick = true;
     private bool cursorLocked = true;
 
-    private bool isTouching = false;
-
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
