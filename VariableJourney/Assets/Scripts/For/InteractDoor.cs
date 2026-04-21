@@ -7,6 +7,9 @@ public class InteractDoor : MonoBehaviour
 
     private bool isOpen = false;
 
+    private bool timerStart = false;
+    private float timer = 5;
+
     private void Start()
     {
         roomSpawn = GameObject.Find("RoomsSpawn").GetComponent<RoomSpawn>();
@@ -20,6 +23,20 @@ public class InteractDoor : MonoBehaviour
             isOpen = true;
 
             roomSpawn.Spawn(this.transform);
+
+            if (this.gameObject.name == "EndDoor(Clone)")
+            {
+                timerStart = true;
+            }
         }
+    }
+
+    private void Update()
+    {
+        if (timerStart)
+            timer -= Time.deltaTime;
+
+        if (timer < 0)
+            Debug.Log("End game");
     }
 }
