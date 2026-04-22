@@ -9,7 +9,7 @@ public class IntBall : MonoBehaviour
     [SerializeField]
     private GameObject player;
     [SerializeField]
-    private GameObject cameraUI;
+    private GameObject typeText;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -20,7 +20,7 @@ public class IntBall : MonoBehaviour
         {
             Destroy(this.gameObject);
             lineController.enabled = true;
-            cameraUI.SetActive(true);
+            typeText.SetActive(true);
             player.GetComponent<TypeSwitch>().enabled = true;
             player.GetComponent<Jump>().enabled = true;
         }

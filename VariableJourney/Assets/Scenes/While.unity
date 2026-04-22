@@ -747,6 +747,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e46b86dbe2871a4db1e2282129b447f, type: 3}
+--- !u!1 &79532275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7043898670181144290, guid: 2e46b86dbe2871a4db1e2282129b447f, type: 3}
+  m_PrefabInstance: {fileID: 79532274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &79532276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4427972598469160563, guid: 2e46b86dbe2871a4db1e2282129b447f, type: 3}
+  m_PrefabInstance: {fileID: 79532274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &80947677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4663914503513827620, guid: 9a76ecbbd3eb65541a3800ce1ef12ccf, type: 3}
@@ -7166,6 +7176,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7888674103479565642, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
+      propertyPath: typeText
+      value: 
+      objectReference: {fileID: 79532275}
+    - target: {fileID: 7888674103479565642, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 79532276}
     - target: {fileID: 8049127127172051890, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

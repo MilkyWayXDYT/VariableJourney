@@ -14,6 +14,6 @@ public class TimerRestart : MonoBehaviour
 
     private void LevelRestart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("While");
     }
 }

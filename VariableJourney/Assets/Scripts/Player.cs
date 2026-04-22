@@ -16,25 +16,31 @@ public class Player : MonoBehaviour
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction camResetAction;
+    private InputAction pauseAction;
     private Rigidbody playerRb;
     private Quaternion targetRotation;
 
     private LineController lineController;
 
-    [SerializeField] 
+    [SerializeField]
     private bool lockCursorOnStart = true;
-    [SerializeField] 
-    private bool lockOnMouseClick = true;
     private bool cursorLocked = true;
+
+    [SerializeField]
+    private GameObject pauseMenu;
+    [SerializeField]
+    private GameObject typeText;
 
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
         camResetAction = playerInput.actions.FindAction("CameraReset");
+        pauseAction = playerInput.actions.FindAction("OpenMenu");
         playerRb = GetComponent<Rigidbody>();
 
         camResetAction.performed += PlayerRotReset;
+        pauseAction.performed += PauseMenuOpen;
 
         if (SceneManager.GetActiveScene().name == "TypingLevel")
             lineController = GameObject.Find("Start").GetComponent<LineController>();
@@ -125,19 +131,26 @@ public class Player : MonoBehaviour
         return result;
     }
 
-    private void Update()
+    private void PauseMenuOpen(InputAction.CallbackContext context)
     {
-        if ((Gamepad.current != null && Gamepad.current.leftStickButton.wasPressedThisFrame) ||
-            Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (context.performed)
         {
-            cursorLocked = !cursorLocked;
-            UpdateCursorLock();
+            ContinueGame();
         }
-        else if (lockOnMouseClick && !cursorLocked && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            cursorLocked = true;
-            UpdateCursorLock();
-        }
+    }
+
+    public void ContinueGame()
+    {
+        pauseMenu.SetActive(!Cursor.visible);
+        if (typeText.activeSelf)
+            typeText.SetActive(Cursor.visible);
+        Time.timeScale = 0;
+
+        cursorLocked = !cursorLocked;
+        UpdateCursorLock();
+
+        if (!pauseMenu.activeSelf)
+            Time.timeScale = 1.0f;
     }
 
     private void UpdateCursorLock()

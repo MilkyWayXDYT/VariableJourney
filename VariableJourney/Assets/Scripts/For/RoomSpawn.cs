@@ -87,7 +87,7 @@ public class RoomSpawn : MonoBehaviour
         if (timerStart)
             restartTimer -= Time.deltaTime;
         if (restartTimer < 0)
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("For");
     }
 
     private void RoomsFilling()
