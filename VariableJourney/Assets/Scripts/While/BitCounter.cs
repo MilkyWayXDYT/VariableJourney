@@ -8,6 +8,8 @@ public class BitCounter : MonoBehaviour
     private Material bitAssembledMat;
     [SerializeField]
     private GameObject door;
+    [SerializeField]
+    private SetRoomsCount roomsCount;
 
     private int bitAssembled = 0;
 
@@ -16,7 +18,10 @@ public class BitCounter : MonoBehaviour
         bitAssembled++;
         lamps[bitAssembled - 1].material = bitAssembledMat;
         if (bitAssembled == 5)
+        {
             DoorOpen();
+            roomsCount.NumberConversion();
+        }
     }
 
     private void DoorOpen()

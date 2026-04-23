@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractDoor : MonoBehaviour
 {
@@ -37,6 +38,6 @@ public class InteractDoor : MonoBehaviour
             timer -= Time.deltaTime;
 
         if (timer < 0)
-            Debug.Log("End game");
+            SceneManager.LoadScene("TestPage");
     }
 }

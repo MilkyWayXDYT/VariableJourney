@@ -26,6 +26,8 @@ public class RoomSpawn : MonoBehaviour
     [SerializeField]
     private GameObject simpleDoor;
 
+    private SetRoomsCount roomsCountFromBits;
+
     private List<GameObject> rooms;
     private int simpleRoomCount, hallwayCount, randomLeverRoomCount, puzzleRoomCount;
 
@@ -38,6 +40,10 @@ public class RoomSpawn : MonoBehaviour
 
     private void Start()
     {
+        roomsCountFromBits = GameObject.Find("DontDestroy").GetComponent<SetRoomsCount>();
+        if (roomsCountFromBits)
+            roomsCount = roomsCountFromBits.roomsCount;
+
         if (roomsCount == 15)
         {
             simpleRoomCount = 4;
