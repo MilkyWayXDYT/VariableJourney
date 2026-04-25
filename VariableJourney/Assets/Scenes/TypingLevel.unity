@@ -9345,6 +9345,9 @@ MonoBehaviour:
   lineRenderer: {fileID: 1504585832}
   ropeMaterial: {fileID: 13400000, guid: 58803c389c3f77246807c1a69b990941, type: 2}
   typeSwitch: {fileID: 2094726019}
+  columnLayer:
+    serializedVersion: 2
+    m_Bits: 1073741824
   points: []
 --- !u!1 &1513106894
 GameObject:
@@ -12029,7 +12032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.18
+      value: -50.14
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12037,7 +12040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.58
+      value: -16.18
       objectReference: {fileID: 0}
     - target: {fileID: 6417670151752208896, guid: 7a207b93638e9fa43b8cfa2e28cf982e, type: 3}
       propertyPath: m_LocalRotation.w

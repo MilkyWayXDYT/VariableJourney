@@ -28,6 +28,9 @@ public class TestManager : MonoBehaviour
         questions = new List<Question>();
         userAnswers = new List<Question>();
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         GetQuestionsFromDatabase();
         GetAnswersFromDatabase();
         SetQuestion();

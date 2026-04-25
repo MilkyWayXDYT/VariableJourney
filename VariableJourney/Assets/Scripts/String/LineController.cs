@@ -15,6 +15,8 @@ public class LineController : MonoBehaviour
 
     [SerializeField] private TypeSwitch typeSwitch;
 
+    [SerializeField] private LayerMask columnLayer;
+
     public List<Vector3> points;
     List<GameObject> ropeColliders;
     private Player player;
@@ -45,6 +47,7 @@ public class LineController : MonoBehaviour
         lineRenderer.positionCount = points.Count;
         lineRenderer.SetPositions(points.ToArray());
 
+        ClearColliders();
         for (int i = 1; i < points.Count - 1; i++) 
             SetRopeColliders(points[i], points[i + 1]);
     }
@@ -63,19 +66,18 @@ public class LineController : MonoBehaviour
 
     private void CheckAvailabilityPoint()
     {
-        Vector3 playerPoint = points[0];
         Vector3 curPoint = points[1];
         Vector3 nextPoint = points[2];
-        Vector3 dir = (nextPoint - playerPoint).normalized;
+        Vector3 dir = (nextPoint - points[0]).normalized;
 
         RaycastHit hit;
-        Debug.DrawLine(playerPoint + dir / 2, nextPoint - dir / 3, Color.red);
+        Debug.DrawLine(points[0] + dir / 2, nextPoint - dir / 3, Color.red);
 
-        Vector3 perpPoint = FindPerpendicularPointOnLine(playerPoint, nextPoint, curPoint);
+        Vector3 perpPoint = FindPerpendicularPointOnLine(points[0], nextPoint, curPoint);
 
         if (perpPoint != Vector3.zero)
         {
-            if (!Physics.Linecast(playerPoint + dir / 2, nextPoint - dir / 3, out hit, 30) && !Physics.Linecast(curPoint, perpPoint, out RaycastHit perpHit))
+            if (!Physics.Linecast(points[0] + dir / 2, nextPoint - dir / 3, out hit, columnLayer) && !Physics.Linecast(curPoint, perpPoint, out RaycastHit perpHit))
             {
                 points.RemoveAt(1);
                 player.maxDistance = Vector3.Distance(playerPos.position, points[1]);
@@ -135,13 +137,23 @@ public class LineController : MonoBehaviour
         ropeColliders.Add(ropeSegment);
     }
 
+    private void ClearColliders()
+    {
+        if (ropeColliders != null)
+        {
+            foreach (var col in ropeColliders)
+                Destroy(col);
+            ropeColliders.Clear();
+        }
+    }
+
     private void SetNewRopePoint()
     {
         Vector3 dir = points[1] - points[0];
         RaycastHit hit;
 
         Debug.DrawLine(playerPos.position, points[1] - dir / 100 * 5, Color.green);
-        if (Physics.Linecast(playerPos.position, points[1] - dir / 100 * 5, out hit, 1 << 30))
+        if (Physics.Linecast(playerPos.position, points[1] - dir / 100 * 5, out hit, columnLayer))
         {
             points.Insert(1, hit.point);
             BuildRope();

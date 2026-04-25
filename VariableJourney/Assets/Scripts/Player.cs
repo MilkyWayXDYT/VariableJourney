@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject typeText;
 
+    private GameObject ball;
+
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -44,6 +46,8 @@ public class Player : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "TypingLevel")
             lineController = GameObject.Find("Start").GetComponent<LineController>();
+
+        ball = GameObject.Find("Ball");
 
         if (lockCursorOnStart)
         {
@@ -142,7 +146,7 @@ public class Player : MonoBehaviour
     public void ContinueGame()
     {
         pauseMenu.SetActive(!Cursor.visible);
-        if (typeText.activeSelf)
+        if (!ball)
             typeText.SetActive(Cursor.visible);
         Time.timeScale = 0;
 

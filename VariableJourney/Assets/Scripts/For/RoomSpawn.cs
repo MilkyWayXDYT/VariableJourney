@@ -40,9 +40,12 @@ public class RoomSpawn : MonoBehaviour
 
     private void Start()
     {
-        roomsCountFromBits = GameObject.Find("DontDestroy").GetComponent<SetRoomsCount>();
-        if (roomsCountFromBits)
+        var dontDestroy = GameObject.Find("DontDestroy");
+        if (dontDestroy != null)
+        {
+            roomsCountFromBits = dontDestroy.GetComponent<SetRoomsCount>();
             roomsCount = roomsCountFromBits.roomsCount;
+        }
 
         if (roomsCount == 15)
         {
